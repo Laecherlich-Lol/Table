@@ -1,4 +1,3 @@
 # Table
-Tabelle für Kassenbericht.
-
-Hi World 
+Tabelle für Kassenbericht. 
+Hallo Welt!
