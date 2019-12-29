@@ -1,6 +1,6 @@
 import tkinter as t
-
 from tkinter import filedialog
+
 
 window = t.Tk()
 window.title("Kassenbericht")
@@ -17,18 +17,32 @@ def get_files():
     window.filename = filedialog.askopenfilename(
         initialdir="/",
         title="Select file",
-        filetypes=(("jpeg files", "*.jpg"), ("all files", "*.*")),
+        filetypes=(("excel files", "*.xlsx"), ("all files", "*.*")),
     )
     print(window.filename)
 
 
+def input_new_dir():
+    name = t.Entry(window, font=("Arial", 14)).place()
+    name.pack()
+
+
 select_file_button = t.Button(
     window,
-    text="choose the directory",
+    text="选择文件",
     font=("Arial", 12),
-    width=10,
+    width=25,
     height=1,
     command=click_button,
 )
+create_new_file = t.Button(
+    window,
+    text="新的文件",
+    font=("Arial", 12),
+    width=25,
+    height=1,
+    command=input_new_dir,
+)
 select_file_button.pack()
+create_new_file.pack()
 window.mainloop()
